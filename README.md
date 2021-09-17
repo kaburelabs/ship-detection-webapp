@@ -13,18 +13,17 @@ https://www.kaggle.com/c/airbus-ship-detection
 
 To run an app locally:
 
-1. (optional) create and activate new virtualenv or conda env:
+1. (optional) create and activate new virtualenv or conda env:<br>
 ```
 pip install pipenv
 pipenv shell
-```
-2. `pipenv install`
-
+```<br>
+2. `pipenv install`<br>
 search for your correct pytorch version here https://pytorch.org/get-started/locally/<br>
-In my case it is:
-3. `pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html` 
-The model is a UNET_RESNET34ImgNet so is needed to install it too:
-5. `pip install git+https://github.com/qubvel/segmentation_models.pytorch > /dev/null 2>&1` 
-6. `python app.py` 
+In my case it is:<br>
+3. `pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html` <br>
+The model is a UNET_RESNET34ImgNet so is needed to install it too:<br>
+5. `pip install git+https://github.com/qubvel/segmentation_models.pytorch > /dev/null 2>&1` <br>
+6. `python app.py` <br>
 
 

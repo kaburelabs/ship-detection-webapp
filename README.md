@@ -13,11 +13,11 @@ https://www.kaggle.com/c/airbus-ship-detection
 
 To run an app locally:
 
-1. (optional) create and activate new virtualenv or conda env:<br>
+1. (optional) create and activate new virtualenv or conda env:
 ```
 pip install pipenv
 pipenv shell
-```<br>
+```
 2. `pipenv install`<br>
 search for your correct pytorch version here https://pytorch.org/get-started/locally/<br>
 In my case it is:<br>

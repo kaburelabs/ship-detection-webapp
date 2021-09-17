@@ -752,15 +752,16 @@ elif MODEL_SEG == "UNET_RESNET34ImgNet":
 else:
     raise NameError("model not supported")
 
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 # Model inference
 model_path = "model_{fold}.pt".format(fold=run_id)
-state = torch.load(str(model_path))
+state = torch.load(str(model_path), map_location=device)
 state = {key.replace("module.", ""): value for key, value in state["model"].items()}
-
 
 model.load_state_dict(state)
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
 model.eval()
 

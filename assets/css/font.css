@@ -1,0 +1,140 @@
+
+.font-xxs {
+    font-size:12px;
+    line-height: 14.2px;
+}
+
+.font-xs {
+    font-size:14px; 
+    line-height: 16.8px;
+}
+
+.font-sm {
+    font-size: 16px;
+    line-height: 19.6px;
+}
+
+.font-md {
+    font-size: 18px;
+    line-height: 22.4px;
+}
+
+.font-lg {
+    font-size:24px;
+    line-height: 31.2px;
+}
+
+.font-xl {
+    font-size: min(24px, 24px);
+}
+
+.font-xxl {
+    font-size: min(34px, 34px);
+}
+
+
+
+.h1 {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 37.4px;
+}
+
+
+.h2 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28.8px;
+}
+
+
+.h3 {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 21.6px;
+}
+
+.h4 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20.8px;
+}
+
+.h5 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+}
+
+.h6 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+}
+
+
+
+@media (max-width: 600px) {
+
+    .h1 {
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 28.8px;
+    }
+
+    .h2 {
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 24px;
+    }
+
+    .h3 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21.6px;
+    }
+
+    .h4 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20.8px;
+    }
+
+    .h5 {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16.8px;
+    }
+
+    .h6 {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 14.4px;
+    }
+
+    .font-xxs {
+        font-size:12px;
+        line-height: 14.2px;
+    }
+    
+    .font-xs {
+        font-size:14px; 
+        line-height: 16.8px;
+    }
+
+    .font-sm {
+        font-size: 16px;
+        line-height: 19.6px;
+    }
+    
+    .font-md {
+        font-size: 18px;
+        line-height: 22.4px;
+    }
+    
+    .font-lg {
+        font-size:24px;
+        line-height: 31.2px;
+    }
+}
+

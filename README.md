@@ -19,7 +19,8 @@ pip install pipenv
 pipenv shell
 ```
 2. `pipenv install`
-search for your correct pytorch version here https://pytorch.org/get-started/locally/
+
+search for your correct pytorch version here https://pytorch.org/get-started/locally/<br>
 In my case it is:
 3. `pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html` 
 The model is a UNET_RESNET34ImgNet so is needed to install it too:

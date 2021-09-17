@@ -1,4 +1,4 @@
--f https://download.pytorch.org/whl/torch_stable.html
+-f https://download.pytorch.org/whl/nightly/cpu/torch_nightly.html
 Brotli==1.0.9
 click==8.0.1
 cycler==0.10.0

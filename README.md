@@ -26,4 +26,4 @@ The model is a UNET_RESNET34ImgNet so is needed to install it too:<br>
 5. `pip install git+https://github.com/qubvel/segmentation_models.pytorch > /dev/null 2>&1` <br>
 6. `python app.py` <br>
 
-
+Navigate to http://127.0.0.1:8110/ 

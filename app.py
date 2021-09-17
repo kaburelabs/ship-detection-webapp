@@ -242,64 +242,64 @@ def starting_the_app(btn_n, images_to_load):
         validation_df,
     )
 
-@app.callback(
-    Output("ground-truth-image", "children"),
-    Output("output-image", "children"),
-    Input("predict-btn", "n_clicks"),
-    State("image-df-data", "data"),
-)
-def starting_the_app(n_clicks, content):
+# @app.callback(
+#     Output("ground-truth-image", "children"),
+#     Output("output-image", "children"),
+#     Input("predict-btn", "n_clicks"),
+#     State("image-df-data", "data"),
+# )
+# def starting_the_app(n_clicks, content):
 
-    if n_clicks == None:
-        raise PreventUpdate
+#     if n_clicks == None:
+#         raise PreventUpdate
 
-    time.sleep(2.5)
+#     time.sleep(2.5)
 
-    img, mask, output = pytorch_segmentation(pd.DataFrame.from_dict(content))
+#     img, mask, output = pytorch_segmentation(pd.DataFrame.from_dict(content))
 
-    mask_fig = px.imshow(mask)
+#     mask_fig = px.imshow(mask)
 
-    mask_fig.update_layout(
-        margin=dict(t=0, b=0, r=0, l=0),
-        height=300,
-        width=300,
-        xaxis=dict(ticks=None),
-        plot_bgcolor="rgba(0,0,0,0)",
-        paper_bgcolor="rgba(0,0,0,0)",
-        dragmode="drawrect",
-        newshape=dict(line_color="cyan"),
-    )
+#     mask_fig.update_layout(
+#         margin=dict(t=0, b=0, r=0, l=0),
+#         height=300,
+#         width=300,
+#         xaxis=dict(ticks=None),
+#         plot_bgcolor="rgba(0,0,0,0)",
+#         paper_bgcolor="rgba(0,0,0,0)",
+#         dragmode="drawrect",
+#         newshape=dict(line_color="cyan"),
+#     )
 
-    output_fig = px.imshow(output)
-    output_fig.update_layout(
-        margin=dict(t=0, b=0, r=0, l=0),
-        height=300,
-        width=300,
-        xaxis=dict(ticks=None),
-        plot_bgcolor="rgba(0,0,0,0)",
-        paper_bgcolor="rgba(0,0,0,0)",
-        dragmode="drawrect",
-        newshape=dict(line_color="cyan"),
-    )
+#     output_fig = px.imshow(output)
+#     output_fig.update_layout(
+#         margin=dict(t=0, b=0, r=0, l=0),
+#         height=300,
+#         width=300,
+#         xaxis=dict(ticks=None),
+#         plot_bgcolor="rgba(0,0,0,0)",
+#         paper_bgcolor="rgba(0,0,0,0)",
+#         dragmode="drawrect",
+#         newshape=dict(line_color="cyan"),
+#     )
 
-    return (
-        dcc.Graph(
-            figure=mask_fig,
-            config={
-                "modeBarButtonsToAdd": [
-                    "drawline", "drawopenpath", "drawclosedpath",
-                    "drawcircle", "drawrect", "eraseshape" ]
-            },
-        ),
-        dcc.Graph(
-            figure=output_fig,
-            config={
-                "modeBarButtonsToAdd": [
-                    "drawline", "drawopenpath", "drawclosedpath",
-                    "drawcircle", "drawrect", "eraseshape"]
-            },
-        ),
-    )
+#     return (
+#         dcc.Graph(
+#             figure=mask_fig,
+#             config={
+#                 "modeBarButtonsToAdd": [
+#                     "drawline", "drawopenpath", "drawclosedpath",
+#                     "drawcircle", "drawrect", "eraseshape" ]
+#             },
+#         ),
+#         dcc.Graph(
+#             figure=output_fig,
+#             config={
+#                 "modeBarButtonsToAdd": [
+#                     "drawline", "drawopenpath", "drawclosedpath",
+#                     "drawcircle", "drawrect", "eraseshape"]
+#             },
+#         ),
+#     )
 
 
 @app.callback(

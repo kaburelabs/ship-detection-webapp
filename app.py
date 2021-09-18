@@ -11,7 +11,7 @@ import dash_bootstrap_components as dbc
 import plotly_express as px
 
 from components.navbar import navbar
-from components.segmentation_model import loading_image_and_fig, pytorch_segmentation
+# from components.segmentation_model import loading_image_and_fig, pytorch_segmentation
 
 import pandas as pd
 import json

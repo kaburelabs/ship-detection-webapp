@@ -223,24 +223,24 @@ app.layout = html.Div(
 )
 
 
-@app.callback(
-    Output("has-ship-on-image", "children"),
-    Output("original-image-renderer", "figure"),
-    Output("loaded-image-name", "children"),
-    Output("image-df-data", "data"),
-    Input("load-img", "n_clicks"),
-    State("pick-image-folder-radio", "value"),
-)
-def starting_the_app(btn_n, images_to_load):
+# @app.callback(
+#     Output("has-ship-on-image", "children"),
+#     Output("original-image-renderer", "figure"),
+#     Output("loaded-image-name", "children"),
+#     Output("image-df-data", "data"),
+#     Input("load-img", "n_clicks"),
+#     State("pick-image-folder-radio", "value"),
+# )
+# def starting_the_app(btn_n, images_to_load):
 
-    txt, img_fig, validation_df = loading_image_and_fig(images_to_load)
+#     txt, img_fig, validation_df = loading_image_and_fig(images_to_load)
 
-    return (
-        txt,
-        img_fig,
-        f"{validation_df[0]['ImageId']}",
-        validation_df,
-    )
+#     return (
+#         txt,
+#         img_fig,
+#         f"{validation_df[0]['ImageId']}",
+#         validation_df,
+#     )
 
 # @app.callback(
 #     Output("ground-truth-image", "children"),
@@ -302,29 +302,29 @@ def starting_the_app(btn_n, images_to_load):
 #     )
 
 
-@app.callback(
-    Output("webapp-started", "data"),
-    Input("webapp-starter", "data"),
-    State("loaded-image-name", "children"),
-)
-def starting_the_app(app_starter, content):
+# @app.callback(
+#     Output("webapp-started", "data"),
+#     Input("webapp-starter", "data"),
+#     State("loaded-image-name", "children"),
+# )
+# def starting_the_app(app_starter, content):
 
-    if app_starter["status"] == "Starting" and content == None:
-        return {"status": "started"}
-    else:
-        return dash.no_update
+#     if app_starter["status"] == "Starting" and content == None:
+#         return {"status": "started"}
+#     else:
+#         return dash.no_update
 
 
-@app.callback(
-    Output("output-results", "style"),
-    Input("predict-btn", "n_clicks")
-)
-def starting_the_app(predict_btn):
+# @app.callback(
+#     Output("output-results", "style"),
+#     Input("predict-btn", "n_clicks")
+# )
+# def starting_the_app(predict_btn):
 
-    if predict_btn == None:
-        return {"display":"none"}
-    else:
-        return {"display":"block"}
+#     if predict_btn == None:
+#         return {"display":"none"}
+#     else:
+#         return {"display":"block"}
 
 
 if __name__ == "__main__":

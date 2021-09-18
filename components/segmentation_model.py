@@ -755,15 +755,15 @@ else:
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# Model inference
-model_path = "model_{fold}.pt".format(fold=run_id)
-state = torch.load(str(model_path), map_location=device)
-state = {key.replace("module.", ""): value for key, value in state["model"].items()}
+# # Model inference
+# model_path = "model_{fold}.pt".format(fold=run_id)
+# state = torch.load(str(model_path), map_location=device)
+# state = {key.replace("module.", ""): value for key, value in state["model"].items()}
 
-model.load_state_dict(state)
+# model.load_state_dict(state)
 
-model = model.to(device)
-model.eval()
+# model = model.to(device)
+# model.eval()
 
 
 # ref: https://www.kaggle.com/paulorzp/run-length-encode-and-decode
